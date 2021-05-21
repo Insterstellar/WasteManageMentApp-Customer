@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MapsFragment">
+
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchloc"
+                android:queryHint="Enter your location"
+                app:iconifiedByDefault="false"
+                android:importantForAutofill="auto"
+                app:queryHint="enter location manually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/driver_Linear"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:layout_above="@+id/lookfor"
+        android:background="@android:color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="15dp"
+        android:elevation="1dp"
+        android:translationZ="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:id="@+id/driverProfileImage"
+                android:src="@drawable/profile"
+                android:padding="20sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="40sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/driverName"
+                    android:paddingBottom="10sp"
+                    android:text="Customer name"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drivrPhone"
+                    android:autoLink="phone"
+                    android:text="number"
+                    android:paddingBottom="10sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/lookfor"
+        android:layout_width="wrap_content"
+
+        android:text="Request pickup"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:drawablePadding="16dp"
+        android:drawableStart="@drawable/car"
+        android:textColor="@android:color/white"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@drawable/btn_rounded_green_300"
+        android:layout_centerHorizontal="true"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+         />
+</RelativeLayout>

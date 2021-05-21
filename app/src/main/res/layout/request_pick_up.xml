@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".RequestPickUp">
+
+        <RelativeLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_grey"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/login_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Enter pick item details"
+                android:textSize="16sp"
+                android:textColor="#1A5853" />
+            <EditText
+                android:id="@+id/editmap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/message"
+                android:drawablePadding="5dp"
+                android:layout_marginEnd="20dp"
+                android:padding="20dp"
+                android:layout_below="@id/login_title"
+                android:hint="Add additional notes"
+                android:background="@drawable/round_white"/>
+
+            <RelativeLayout
+                android:id="@+id/categoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editmap"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_xtreme"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:id="@+id/textcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1A5853"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Waste Category"/>
+
+                <RelativeLayout
+                    android:id="@+id/WasteCategory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_white"
+                    android:layout_below="@id/textcategory"
+                    >
+                    <Spinner
+                        android:id="@+id/spineMe"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+
+                        android:text="Recyclable bottles of all sizes "
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@id/spineMe"
+                        android:textColor="#1A5853"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/weightTitle"
+                   android:layout_below="@id/WasteCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1A5853"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Weight Estimation"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/WeighEstimation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_lighgreen"
+                    android:layout_below="@id/weightTitle"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:elevation="4dp"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageButton
+                            android:id="@+id/subtract"
+                            android:layout_width="wrap_content"
+                            android:layout_height="47dp"
+                            android:background="#1A5853"
+                            android:src="@drawable/substract" />
+
+                        <TextView
+                            android:id="@+id/amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#fff"
+                            android:paddingStart="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="#065D54"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/addition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="47dp"
+                            android:elevation="4dp"
+                            android:background="#1A5853"
+                            android:src="@drawable/additional" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Kg"
+                        android:textColor="#065D54"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.05"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="0"
+                        android:elevation="4dp"
+                        android:textColor="#065D54"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kg"
+                        android:textColor="#065D54"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/picture"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/WeighEstimation"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="0dp"
+        android:src="@drawable/camera"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#1A5853"
+        android:text="Take a photo of the waste to pick up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/submitt"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/submitt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/categoryLayout"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded_green_300"
+                android:text="Proceed to request a pickup"
+                android:textColor="#FAF6F6" />
+
+
+        </RelativeLayout>
+
+</ScrollView>

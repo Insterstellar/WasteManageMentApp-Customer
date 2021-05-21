@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_pickup"
+            android:icon="@drawable/car"
+            android:title="Request Pickup" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/pickups"
+            android:title="Recent Pickups" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Account" />
+    </group>
+
+    <item android:title="communicate">
+        <menu>
+
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/contact"
+                android:title="Contact" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="About" />
+
+            <item
+                android:id="@+id/nav_signout"
+                android:icon="@drawable/signout_firebase"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+</menu>
