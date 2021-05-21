@@ -29,6 +29,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.Map;
 
+
+// created by Mandy Ronald
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     FirebaseAuth firebaseAuth;
